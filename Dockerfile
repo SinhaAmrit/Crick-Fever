@@ -19,10 +19,10 @@ FROM openjdk:17-jdk-slim
 WORKDIR /app
 
 # Copy the built JAR files from the build stage
-COPY --from=build /app/target/crick-fever-0.0.1-SNAPSHOT.jar /app/crick-fever-0.0.1-SNAPSHOT.jar
+COPY --from=build /app/target/crick-fever-0.0.1-SNAPSHOT.jar .
 
 # Expose port
 EXPOSE 8080
 
 # Specify the command to run the project
-ENTRYPOINT ["java", "-jar", "app/crick-fever-0.0.1-SNAPSHOT.jar"]
+ENTRYPOINT ["java", "-jar", "/app/target/crick-fever-0.0.1-SNAPSHOT.jar"]
