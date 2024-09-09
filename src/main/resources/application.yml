@@ -1,0 +1,15 @@
+crickfever:
+  website:
+    liveUrl: https://www.cricbuzz.com/cricket-match/live-scores
+    pointsTableUrl: https://m.cricbuzz.com/cricket-series/7476/icc-mens-t20-world-cup-2024/points-table
+spring:
+  application:
+    name: Crick Fever
+  datasource:
+    password: password
+    url: jdbc:mysql://localhost:3306/crickfever_db
+    username: admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
